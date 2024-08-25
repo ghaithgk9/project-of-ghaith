@@ -1,0 +1,389 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic');
+:root {
+    --purple-color: #6369f5;
+    --second-color: #f5f4fa;
+    --text-color: #444444;
+    --white-color: #fff;
+    --orange: #ff9500;
+    --black-color: #333;
+    --light-color: rgba(0,0,0,.3);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7.5rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh; 
+   
+  
+}
+body.active{
+    --white-color:#111;
+    --black-color:#fff;
+    --light-color:rgba(255,255,255,.3);
+    background:#222;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white-color);
+    border-bottom: .1rem solid var(--white-color);
+    padding: 1.5rem 9%;
+}
+
+header .logo {
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: var(--black-color);
+    font-size: 3rem;
+}
+
+header form {
+    display: flex;
+    align-items: center;
+    width: 40rem;
+    border-radius: 5rem;
+    height: 5rem;
+    background: var(--black-color);
+    overflow: hidden;
+}
+
+header form input {
+    width: 100%;
+    height: 100%;
+    background: none;
+    font-size: 1.7rem;
+    color: var(--white-color);
+    padding: 0 2rem;
+    text-transform: none;
+}
+
+header form label {
+    font-size: 2rem;
+    padding-right: 2rem;
+    color: var(--white-color);
+    cursor: pointer;
+    text-align: center;
+}
+
+
+header .icons div,
+header .icons a {
+    height: 4rem;
+    width: 4rem;
+    font-size: 1.7rem;
+    line-height: 4rem;
+    background: var(--black-color);
+    color: var(--white-color);
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: .7rem;
+}
+
+header .icons div:hover,
+header .icons a:hover {
+    background: var(--black-color);
+    color: var(--orange);
+}
+header.active{
+    position: fixed;
+    top: 0;left: 0;
+    z-index: 100;
+}
+body{
+    height: 200rem;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: -120%;
+    height: 100%;
+    background: var(--white-color);
+    padding: 3rem;
+    width: 30rem;
+    z-index: 10000;
+    transition: left 0.3s ease;
+}
+
+.navbar.active {
+    left: 0;
+    box-shadow: 0 0 0 100vw var(--light-color);
+}
+
+.navbar .user {
+    text-align: center;
+    margin: 3rem auto;
+}
+
+.navbar .user img {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    border: .5rem solid var(--white-color);
+    object-fit: cover;
+    box-shadow: 5rem 2rem 0 -3rem var(--orange),
+                -5rem -2rem 0 -3rem var(--orange);
+}
+
+.navbar .user h3 {
+    padding-top: .5rem;
+    color: var(--black-color);
+    font-weight: 500;
+}
+
+.navbar .links a {
+    display: block;
+    border-bottom: .1rem solid var(--light-color);
+    font-size: 2rem;
+    padding: 1.5rem 0;
+    color: var(--black-color);
+}
+
+.navbar .links a:last-child {
+    border: none;
+}
+
+.navbar .links a:hover {
+    letter-spacing: .2rem;
+    color: var(--orange);
+}
+
+.navbar #close {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 3rem;
+    cursor: pointer;
+    color: var(--black-color);
+}
+
+.navbar #close:hover {
+    color: var(--orange);
+}
+
+#cata {
+    border: none;
+}
+
+ul {
+    gap: 3px;
+}
+
+li {
+    padding-left: 30px;
+    font-size: 16px;
+    list-style-type: none;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    padding: 40px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: row;
+    border-radius: 10px;
+    background-color: var(--white-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.left h3{
+    font-size: 30px;
+}
+.left p{
+    font-size: 18px;
+}
+.left {
+    width: 55%;
+}
+
+.heading {
+    font-size: 1.4rem; 
+    margin-top: 10px;
+    font-weight: 600;
+    color: var(--orange);
+}
+
+form {
+    margin-top: 20px;
+}
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    background-color: var(--second-color);
+}
+
+.input-box textarea {
+    resize: none;
+    height: 150px;
+}
+
+.btn {
+    width: 100%;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    color: var(--white-color);
+    background-color: var(--orange);
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgba(255, 166, 0, 0.705);
+}
+
+
+.right {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.illustration {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.illustration img {
+    width: 70%;
+    margin-top: 60px;
+    margin-left: 86px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    gap: 20px;
+}
+
+.icons i {
+    font-size: 30px;
+    color: var(--orange);
+    transition: 0.3s;
+   
+}
+
+.icons i:hover {
+    color: #4b52d8;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    .right {
+        margin-top: 20px;
+    }
+
+    .illustration img {
+        width: 100%;
+        margin: 0;
+    }
+
+    .icons {
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .input-box input, .input-box textarea {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-flow: column;
+    }
+
+    header form {
+        width: 100%;
+        margin: 2rem 0;
+    }
+
+    header.active {
+        transform: translateY(-12.5rem);
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .heading {
+        text-align: center;
+        font-size: 2.5rem;
+        border-bottom: none;
+    }
+}

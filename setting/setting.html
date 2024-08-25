@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="setting.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="shortcut icon" href="../images/pngegg (1).png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="filterEntries">
+                <div class="entries">
+                    <button class="addMemberBtn">Add Member</button>
+                    <button class="clearAllBtn">Clear All Users</button>
+                </div>
+            </div>
+        </header>
+
+        <table>
+            <thead>
+                <tr class="heading">
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody">
+              
+            </tbody>
+        </table>
+
+        <footer>
+            <span>Total Users: <span id="totalUsers">0</span></span>
+        </footer>
+    </div>
+    
+    <div class="dark_bg">
+        <div class="popup">
+            <header>
+                <span>Add or Update Member</span>
+                <button class="closeBtn">&times;</button>
+            </header>
+            <form id="addUserForm">
+                <div class="inputFieldContainer">
+                    <div class="form_control">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form_control">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form_control">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <div class="form_control">
+                        <label for="role">Role</label>
+                        <select id="role">
+                            <option value="User">User</option>
+                            <option value="Admin">Admin</option>
+                        </select>
+                    </div>
+                </div>
+                <footer>
+                    <button type="submit" class="submitBtn">submit</button>
+                </footer>
+            </form>
+        </div>
+    </div>
+
+    <script src="setting.js"></script>
+</body>
+</html> 

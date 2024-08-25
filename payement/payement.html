@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="payement.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="shortcut icon" href="../images/pngegg (1).png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">readX</a>
+        <form action="">
+            <input type="search" id="search-bar">
+            <label for="search-bar" class="fa-solid fa-magnifying-glass"></label>
+        </form>
+        <div class="icons">
+            <div id="menu-bar" class="fa-solid fa-bars"></div>
+            <div id="theme-toggler" class="fa-solid fa-moon"></div>
+            <a href="../favorite/favorite.html" class="fa-solid fa-heart"></a>
+            <a href="../payement/payement.html" class="fa-regular fa-credit-card"></a>
+            <a href="../login&registre/login&rejistre.html" class="fa-solid fa-user"></a>
+            <a href="../setting/setting.html" class="fa-sharp fa-solid fa-gear"></a>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="user">
+            <img src="360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg" alt="">
+            <h3>our best client</h3>
+        </div>
+        <div class="links">
+            <a href="/index.html">home</a>
+           
+            <a href="../contact us/contact.html">contact us</a>
+            <a href="../arabic/arabic.html">Arabic literature</a>
+            <a href="../english/english.html">English literature</a>
+           <ul> <a href="../catagory/catagory.html" id="cata">catagory</a>
+            <li><a href="../history/history.html">history</a></li>
+            <li><a href="../self-devolpment/self.html">self-devolpment</a></li>
+            <li><a href="../adventure/adventure.html">Adventure</a></li>
+            <li><a href="../fiction/fiction.html">Science Fiction & Fantasy</a></li>
+            
+
+        </ul>
+        </div>
+        <div id="close" class="fas fa-times"></div>
+    </nav>
+
+    <div class="container">
+        <form action="">
+            <div class="row">
+                <div class="column">
+                    <h3 class="title">Billing Address</h3>
+                    <div class="input-box">
+                        <label for="full-name">Full Name :</label>
+                        <input type="text" id="full-name" placeholder="Ghaith Kouki" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" placeholder="name@gmail.com" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="address">Address :</label>
+                        <input type="text" id="address" placeholder="Your address" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="city">City :</label>
+                        <input type="text" id="city" placeholder="Tunis" required>
+                    </div>
+                    <div class="flex">
+                        <div class="input-box">
+                            <label for="state">State :</label>
+                            <input type="text" id="state" placeholder="Country" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="zip">Zip Code :</label>
+                            <input type="number" id="zip" placeholder="123456" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3 class="title">Payment :</h3>
+                    <div class="input-box">
+                        <label>Cards Accepted :</label>
+                        <img src="images (8).jfif" alt="">
+                    </div>
+                    <div class="input-box">
+                        <label for="name-on-card">Name on Card:</label>
+                        <input type="text" id="name-on-card" placeholder="Mr. Ghaith Kouki" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="card-number">Credit Card Number:</label>
+                        <input type="number" id="card-number" placeholder="1111 2222 3333 4444" required>
+                    </div>
+                    <div class="flex">
+                        <div class="input-box">
+                            <label for="exp-month">Exp. Month</label>
+                            <input type="text" id="exp-month" placeholder="August" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="exp-year">Exp. Year</label>
+                            <input type="number" id="exp-year" placeholder="2025" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="cvv">CVV</label>
+                            <input type="number" id="cvv" placeholder="123" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+
+    <script src="payement.js"></script>
+</body>
+</html>

@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Poppins:wght@100;200;300;400&display=swap');
+
+:root {
+    --dark1: #0000004d;
+    --dark2: #181c20;
+    --dark3: #212529;
+    --dark4: #2d3135;
+    --dark5: #424549;
+    --dark6: #404346;
+    --dark7: #9c9c9c;
+    --dark8: #dae0e7;
+    --dark9: #262a2e;
+    --red1: #f4f4f4;
+    --dark10: #ffffff;
+    --dark11: rgba(128, 128, 128, 0.774);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: linear-gradient(var(--red1) 50%, var(--dark11) 50%);
+}
+
+.container {
+    padding: 20px;
+    box-shadow: 3px 3px 20px var(--dark1);
+    background: var(--dark10);
+    border-radius: 10px;
+    margin: 10px;
+    margin-top: 50px;
+    width: 100%;
+    max-width: 800px; 
+}
+
+.container header .filterEntries {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.filterEntries .entries {
+    color: var(--dark1);
+    display: flex;
+    flex-wrap: wrap; 
+    
+}
+
+.filterEntries .entries button {
+    margin: 5px;
+}
+
+.filterEntries .entries select, .filterEntries .filter input {
+    padding: 7px 10px;
+    border: 1px solid var(--dark6);
+    color: var(--dark8);
+    background: var(--dark4);
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.filterEntries .filter {
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.filterEntries .filter label {
+    color: var(--dark8);
+    margin-right: 5px;
+}
+
+.filter input:focus {
+    border-color: var(--dark7);
+}
+
+.container table {
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+}
+
+table .heading {
+    background: var(--dark5);
+    color: var(--dark8);
+}
+
+table .heading th:hover {
+    background: var(--dark4);
+    transition: 0.3s;
+}
+
+table tr {
+    background: var(--dark4);
+}
+
+table tr:hover {
+    cursor: pointer;
+    background: var(--dark5);
+}
+
+table tr th, table tr td {
+    padding: 8px 12px; 
+    color: var(--dark8);
+    vertical-align: middle;
+}
+
+table tr th {
+    padding: 12px 15px;
+}
+
+table tr td:nth-child(1), table tr td:nth-child(2) {
+    text-align: center;
+}
+
+table tr td {
+    border-bottom: 1px solid var(--dark6);
+}
+
+table tbody tr:first-child td {
+    border-top: 1px solid var(--dark6);
+}
+
+table tbody tr:nth-child(odd) {
+    background: var(--dark4);
+}
+
+table tr td {
+    font-size: 14px; 
+}
+
+table td button {
+    margin: 0 5px;
+    padding: 6px 10px;
+    background: var(--dark5);
+    color: var(--dark8);
+    font-size: 12px; 
+    cursor: pointer;
+    pointer-events: auto;
+    outline: none;
+    border: 1px solid var(--dark7);
+    border-radius: 5px;
+}
+
+.container footer {
+    margin-top: 25px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+}
+
+.container footer span {
+    color: var(--dark5);
+}
+
+footer .pagination {
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+footer .pagination button {
+    width: 30px;
+    padding: 5px 0;
+    color: var(--dark8);
+    background: transparent;
+    font-size: 14px; 
+    cursor: pointer;
+    pointer-events: auto;
+    outline: none;
+    border: 1px solid var(--dark6);
+    border-left: none;
+    margin: 2px; 
+}
+
+.pagination button:first-child {
+    width: 60px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-left: 1px solid var(--dark6);
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.pagination button:last-child {
+    width: 60px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.pagination button.active, .pagination button:hover {
+    background: var(--red1);
+}
+
+.pagination button.act:first-child {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.pagination button.act:last-child {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+table tr .empty {
+    padding: 6px;
+    background: var(--dark9);
+}
+
+.dark_bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.popup {
+    border-radius: 5px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.3);
+    background: var(--dark6);
+    transition: 0.4s;
+    user-select: none;
+    transform: scale(0.7);
+    opacity: 0;
+    visibility: hidden;
+    width: 90%; 
+    max-width: 500px; 
+}
+
+.popup header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--dark7);
+    padding: 10px 20px;
+}
+
+.popup header .closeBtn {
+    font-size: 30px;
+    font-weight: 300;
+    padding: 0 15px;
+}
+
+.popup header .closeBtn:hover, .popup footer .submitBtn:hover {
+    border-color: var(--dark7);
+    color: var(--dark8);
+}
+
+.popup header span {
+    color: var(--dark8);
+    font-size: 16px;
+}
+
+.popup form {
+    padding: 20px;
+}
+
+.popup .inputFieldContainer {
+    margin: 10px 0;
+}
+
+.popup .inputFieldContainer .form_control {
+    margin-bottom: 10px;
+}
+
+.popup .inputFieldContainer label {
+    color: var(--dark8);
+}
+
+.popup .inputFieldContainer input, .popup .inputFieldContainer select {
+    padding: 7px 10px;
+    border: 1px solid var(--dark7);
+    background: var(--dark4);
+    color: var(--dark8);
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.popup .inputFieldContainer input:focus {
+    border-color: var(--dark7);
+}
+
+.popup footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.popup footer .submitBtn {
+    background: var(--dark5);
+    color: var(--dark8);
+    border: 1px solid var(--dark7);
+    padding: 7px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.popup.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.dark_bg.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        margin: 10px;
+        width: 90%;
+        margin-top: 30px;
+    }
+
+    table tr th, table tr td {
+        padding: 6px 10px; 
+        font-size: 12px;
+    }
+
+    footer .pagination button {
+        width: 25px;
+        font-size: 12px; 
+    }
+    
+    footer .pagination button:first-child,
+    footer .pagination button:last-child {
+        width: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .filterEntries {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .filterEntries .entries {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table tbody tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    table tbody tr td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px;
+        border: none;
+        border-bottom: 1px solid var(--dark6);
+    }
+
+    table tbody tr td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-right: 10px;
+    }
+
+    .popup {
+        width: 95%; 
+        max-width: 400px;
+    }
+
+    .popup header {
+        padding: 10px 15px;
+    }
+
+    .popup form {
+        padding: 15px;
+    }
+
+    .popup footer {
+        padding: 8px 0;
+    }
+
+    .popup footer .submitBtn {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
